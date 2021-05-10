@@ -5,9 +5,9 @@ air_thickness = input("空気の厚さを入力してください(km):");
 vital_capacity = input("肺の体積を入力してください(L):");
 molecules = 2*(10**22); #1Lの空気の分子数
 
-volume = 3.14 * 4 / 3 * ( ( int(air_thickness) + int(radius) )**3 - int(radius)**3 ) ; #km**3
+volume = 3.14 * 4 / 3 * ( ( float(air_thickness) + float(radius) )**3 - float(radius)**3 ) ; #km**3
 
-answer = int(molecules) * 22.4 / int(volume) * (int(vital_capacity) * 1000 / (10**15)); # 22.4Lの時の分子数/体積(km**3)×肺の体積(L→km**3)
+answer = float(molecules) * 22.4 / float(volume) * (float(vital_capacity) * 1000 / (10**15)); # 22.4Lの時の分子数/体積(km**3)×肺の体積(L→km**3)
 
 
 print();
